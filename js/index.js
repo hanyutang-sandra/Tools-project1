@@ -38,3 +38,10 @@ function onPlayerStateChange(event) {
 function stopVideo() {
     player.stopVideo();
 }
+
+
+
+$('.showslide').click(function(){
+    console.log('1')
+    $('.slide').toggleClass('active')
+})

@@ -1,12 +1,9 @@
-// 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
-
 tag.src = "https://www.youtube.com/iframe_api";
+
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -14,39 +11,65 @@ function onYouTubeIframeAPIReady() {
         width: '640',
         videoId: 'M7lc1UVf-VE',
         events: {
-            'onReady': onPlayerReady,
-            //'onStateChange': onPlayerStateChange
+            'onReady': playVideo,
+            'onStateChange': onPlayStateChange
         }
     });
+
+    quizSub();
 }
 
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-    event.target.playVideo();
+
+function playVideo(event) {
+    event.target.seekTo(0).playVideo();
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
-        done = true;
+function displayQuiz(){
+    pauseVideo()
+    $('.quiz').addClass('active')
+}
+
+let done = false
+let interval = setInterval(function(){
+    console.log(getTime())
+}, 700)
+
+// Modified from http://jsfiddle.net/thirdender/hnkK7/737/
+
+let stopPlayAt = 10, stopPlayTimer;
+
+function onPlayStateChange(event){
+    var time, rate, remainingTime;
+    clearTimeout(stopPlayTimer);
+    if (event.data == YT.PlayerState.PLAYING) {
+        time = player.getCurrentTime();
+        if (time + .4 < stopPlayAt) {
+            rate = player.getPlaybackRate();
+            remainingTime = (stopPlayAt - time) / rate;
+            stopPlayTimer = setTimeout(displayQuiz, remainingTime * 1000);
+
+        }
     }
 }
+
+function getTime(){
+    return Math.round(player.getCurrentTime());
+}
+
 function stopVideo() {
     player.stopVideo();
 }
 
 
+function pauseVideo() {
+    player.pauseVideo();
+}
 
-$('.showslide').click(function(){
-    $('.slide').toggleClass('active')
+function quizSub(){
+    $('.submitbtn').click(function(){
+        $('.quiz').removeClass('active');
+        player.playVideo()
+    })
+}
 
-})
 
-$('.showquiz').click(function(){
-    $('.quiz').toggleClass('active')
-
-})

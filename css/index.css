@@ -47,8 +47,12 @@
 .quiz{
     display: none;
     position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 50rem;
+    height: 40rem;
     left: 50%;
-    margin-left: -320px;
+    margin-left: -25rem;
     z-index: 20;
     overflow-y: scroll;
 }

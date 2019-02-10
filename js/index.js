@@ -42,6 +42,11 @@ function stopVideo() {
 
 
 $('.showslide').click(function(){
-    console.log('1')
     $('.slide').toggleClass('active')
+
+})
+
+$('.showquiz').click(function(){
+    $('.quiz').toggleClass('active')
+
 })

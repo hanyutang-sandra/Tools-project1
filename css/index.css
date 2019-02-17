@@ -21,13 +21,18 @@
     z-index: -100;
 }
 
+.course-blue{
+    text-align: center;
+}
+
 #player{
     display: block;
     position: absolute;
-    height: 40rem;
-    width: 50rem;
+    width: 853px;
+    height: 480px;
     left: 50%;
-    margin-left: -25rem;
+    margin-left: -427px;
+    margin-top: 3rem;
     z-index: -10;
     -webkit-tranform: translateZ(0);
 }
@@ -45,20 +50,30 @@
 }
 
 .quiz{
-    display: none;
+    display: block;
     position: absolute;
     background-color: white;
     border: 1px solid black;
-    width: 50rem;
-    height: 40rem;
+    width: 960px;
+    height: 540px;
     left: 50%;
-    margin-left: -25rem;
+    margin-left: -480px;
     z-index: 20;
     overflow-y: scroll;
 }
 
 .quiz.active{
     display: block;
+}
+
+.quiz>.drag1{
+    display: block;
+    width: 960px;
+    height: 540px;
+    background-image: url('../resources/drag1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .control{

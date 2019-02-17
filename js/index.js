@@ -7,9 +7,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'M7lc1UVf-VE',
+        height: '480',
+        width: '853',
+        videoId: '9bYyTZLe5Ro',
+        autoplay: 1,
         events: {
             'onReady': playVideo,
             'onStateChange': onPlayStateChange
@@ -18,7 +19,6 @@ function onYouTubeIframeAPIReady() {
 
     quizSub();
 }
-
 
 function playVideo(event) {
     event.target.seekTo(0).playVideo();
@@ -43,7 +43,7 @@ function onPlayStateChange(event){
     clearTimeout(stopPlayTimer);
     if (event.data == YT.PlayerState.PLAYING) {
         time = player.getCurrentTime();
-        if (time + .4 < stopPlayAt) {
+        if (time + .1 < stopPlayAt) {
             rate = player.getPlaybackRate();
             remainingTime = (stopPlayAt - time) / rate;
             stopPlayTimer = setTimeout(displayQuiz, remainingTime * 1000);

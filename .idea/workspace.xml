@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40be666-ec29-4f04-903f-f9702717fd2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/displace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/displace.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/1aa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/1bb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/1dd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2aa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2bb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/2cc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/buttontext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/drag2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontpage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1a.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1ac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1b.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1bc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1c.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1cc.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1cc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1d.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1dc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/drag1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/drag1.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,20 +41,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+            <state relative-caret-position="-888">
+              <caret line="282" column="19" lean-forward="true" selection-start-line="282" selection-start-column="19" selection-end-line="282" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -37,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="369">
+              <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -61,15 +86,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/jQuery.3.3.1.js" />
+        <option value="$PROJECT_DIR$/js/displace.js" />
+        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/index.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="529" />
-    <option name="y" value="23" />
+    <option name="x" value="277" />
+    <option name="y" value="24" />
     <option name="width" value="1400" />
     <option name="height" value="812" />
   </component>
@@ -85,6 +111,11 @@
             <path>
               <item name="tools-project1" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools-project1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools-project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools-project1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools-project1" type="b2602c69:ProjectViewProjectNode" />
@@ -108,6 +139,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -137,19 +169,22 @@
       <workItem from="1549746193849" duration="3497000" />
       <workItem from="1549758927248" duration="10258000" />
       <workItem from="1550351695723" duration="270000" />
-      <workItem from="1550416295163" duration="5959000" />
+      <workItem from="1550416295163" duration="6394000" />
+      <workItem from="1550424689510" duration="49000" />
+      <workItem from="1550435713828" duration="800000" />
+      <workItem from="1550459310793" duration="27314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23440000" />
+    <option name="totallyTimeSpent" value="52038000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="529" y="23" width="1400" height="812" extended-state="0" />
+    <frame x="277" y="24" width="1400" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981844" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49860725" visible="true" weight="0.24981844" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5013928" side_tool="true" visible="true" weight="0.24981844" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -181,24 +216,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontpage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/drag1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/drag1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/displace.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/1bb.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/1aa.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-888">
+          <caret line="282" column="19" lean-forward="true" selection-start-line="282" selection-start-column="19" selection-end-line="282" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="369">
+          <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

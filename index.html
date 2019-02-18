@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jQuery.3.3.1.js"></script>
+    <script type="text/javascript" src="js/displace.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -21,55 +22,66 @@
     </nav>
 </div>
 
-<div class="row explanation">
-    <div class="col s12">
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">How do ball-pens work</span>
-                <p>Because there is a small ball at the tip of the ball-pen, it can move so that it works</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="course blue">
     <div id="player"></div>
-    <div class="quiz">
+    <div class="cover active">
+        <div class="front active">
+            <button type="button">
+                <img src="resources/buttontext.png" alt="Let's Start Learning">
+            </button>
+        </div>
         <div class="drag1">
             <div class="drag1_target">
-                <div class="drag1_target_object a">
-                    <img src="resources/1a.png" alt="A long narrow tube">
+                <div class="drag1_target_object" id="t1a">
+                    <span></span>
+                    <img src="resources/1a.png" alt="which is a long narrow tube">
                 </div>
-                <div class="drag1_target_object b">
-                    <img src="resources/1b.png" alt="The place for you to hold the pen">
+                <div class="drag1_target_object" id="t1b">
+                    <span></span>
+                    <img src="resources/1b.png" alt="the place for you to hold your pen">
                 </div>
-                <div class="drag1_target_object c">
-                    <img src="resources/1c.png" alt="Separates ink and paper">
+                <div class="drag1_target_object" id="t1c">
+                    <span></span>
+                    <img src="resources/1c.png" alt="which separates ink and paper">
                 </div>
-                <div class="drag1_target_object d">
-                    <img src="resources/1d.png" alt="Used as a cap">
+                <div class="drag1_target_object" id="t1d">
+                    <span></span>
+                    <img src="resources/1d.png" alt="used as a cap">
                 </div>
             </div>
             <div class="drag1_block">
-                <div class="drag1_block_object ac">
-                    <img src="resources/1ac.png" alt="Ink reservoir">
-                </div>
-                <div class="drag1_block_object bc">
-                    <img src="resources/1bc.png" alt="Outer tube">
-                </div>
-                <div class="drag1_block_object cc">
-                    <img src="resources/1cc.png" alt="Socket">
-                </div>
-                <div class="drag1_block_object dc">
-                    <img src="resources/1dc.png" alt="Ball">
+                <img class="drag1_block_object" id="b1d" src="resources/1dd.png" alt="Ball" draggable="true">
+                <img class="drag1_block_object" id="b1c" src="resources/1cc.png" alt="Socket" draggable="true">
+                <img class="drag1_block_object" id="b1b" src="resources/1bb.png" alt="Outer Tube" draggable="true">
+                <img class="drag1_block_object" id="b1a" src="resources/1aa.png" alt="Ink Reservoir" draggable="true">
+            </div>
+            <button class="drag1_button" type="button">Good Job! Now keep watching the video!</button>
+        </div>
+        <div class="drag2">
+            <div class="drag2_target">
+                <div class="drag2_target">
+                    <div class="drag2_target_object" id="t2a">
+                        <span></span>
+                        <img src="resources/2a.png" alt="which is a long narrow tube">
+                    </div>
+                    <div class="drag2_target_object" id="t2b">
+                        <span></span>
+                        <img src="resources/2b.png" alt="the place for you to hold your pen">
+                    </div>
+                    <div class="drag2_target_object" id="t2c">
+                        <span></span>
+                        <img src="resources/2c.png" alt="which separates ink and paper">
+                    </div>
                 </div>
             </div>
+            <div class="drag2_block">
+                <img class="drag1_block_object" id="b2a" src="resources/2aa.png" alt="Ball" draggable="true">
+                <img class="drag1_block_object" id="b2c" src="resources/2bb.png" alt="Socket" draggable="true">
+                <img class="drag1_block_object" id="b2b" src="resources/2cc.png" alt="Outer Tube" draggable="true">
+            </div>
+            <button class="drag2_button" type="button">Good Job! Now keep watching the video!</button>
         </div>
     </div>
-    <!--<div class="control">
-        <a class="waves-effect deep-purple lighten-3 btn showslide">Slides</a>
-        <a class="waves-effect deep-purple lighten-3 btn showquiz">Quiz</a>
-    </div>--->
 </div>
 
 

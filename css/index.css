@@ -1,28 +1,70 @@
+html{
+    width: 100%
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+    background: transparent; !important;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+
+}
+
+.navigation{
+    width: 100%;
+    background-color: #93B3D7;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
 .name{
-    margin-left: 5rem;
+    display: inline-block;
+    width: 20rem;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    overflow: hidden;
+}
+
+.name>img:first-of-type{
+    display: inline-block;
+    width: 1.5rem;
+    object-fit: contain;
+}
+
+.name>img:last-of-type{
+    display: inline-block;
+    width: 14rem;
+    margin-left: 1rem;
+    object-fit: contain;
 }
 
 .authors{
     margin-right: 3rem;
+    margin-top: 0.5rem;
+    float: right;
 }
 
-.explanation{
-    margin-top: 10rem;
+.authors>img{
+    display: inline-block;
+    width: 12rem;
 }
 
 .course{
     display: block;
     position: absolute;
     width: 100%;
-    height: 50rem;
-    margin-top: 5rem;
+    height: 40rem;
+    margin-top: 1rem;
     padding: 2.5rem;
     text-align: center;
     z-index: -100;
-}
-
-.course-blue{
-    text-align: center;
+    overflow: hidden;
 }
 
 #player{
@@ -245,21 +287,70 @@
     right: 5rem;
 }
 
-.drag1_button{
+.drag1_feedback{
     display: none;
-    width: 13rem;
-    height: 8rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 1.5rem;
+    z-index: 50;
+    background-image: url('../resources/drag1_feedback.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    visibility: hidden;
+}
+
+.drag1_feedback.active{
+    display: block;
+    visibility: visible;
+}
+
+.drag1_feedback>.drag1_btn{
+    display: block;
+    width: 15rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 2rem;
     left: 50%;
-    margin-left: -6.5rem;
-    background-color: white;
-    border: 1px solid #979797;
-    border-radius: 0.5rem;
-    box-shadow: #d8d8d8 0.1px 0.1px 7px 2px;
-    padding: 1rem;
+    margin-left: -6rem;
     cursor: pointer;
-    z-index: 20;
+}
+
+.drag1_btn.correct{
+    display: none;
+    width: 15rem;
+    height: 12rem;
+    background-image: url('../resources/drag1_r.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drag1_btn.correct:hover{
+    opacity: 0.7;
+}
+
+.drag1_btn.correct.active{
+    display: block;
+}
+
+.drag1_btn.wrong{
+    display: none;
+    width: 15rem;
+    height: 12rem;
+    background-image: url('../resources/drag1_w.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drag1_btn.wrong:hover{
+    opacity: 0.7;
+}
+
+.drag1_btn.wrong.active{
+    display: block;
 }
 
 .drag1_button.active:hover{
@@ -396,20 +487,70 @@
     right: 0;
 }
 
-.drag2_button{
+.drag2_feedback{
     display: none;
-    width: 13rem;
-    height: 4rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 1.5rem;
+    z-index: 50;
+    background-image: url('../resources/drag2_feedback.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    visibility: hidden;
+}
+
+.drag2_feedback.active{
+    display: block;
+    visibility: visible;
+}
+
+.drag2_feedback>.drag2_btn{
+    display: block;
+    width: 15rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 2rem;
     left: 50%;
-    margin-left: -6.5rem;
-    background-color: white;
-    border: 1px solid #979797;
-    border-radius: 0.5rem;
-    box-shadow: #d8d8d8 0.1px 0.1px 7px 2px;
-    padding: 1rem;
+    margin-left: -6rem;
     cursor: pointer;
+}
+
+.drag2_btn.correct{
+    display: none;
+    width: 15rem;
+    height: 12rem;
+    background-image: url('../resources/drag1_r.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drag2_btn.correct:hover{
+    opacity: 0.7;
+}
+
+.drag2_btn.correct.active{
+    display: block;
+}
+
+.drag2_btn.wrong{
+    display: none;
+    width: 15rem;
+    height: 12rem;
+    background-image: url('../resources/drag1_w.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drag2_btn.wrong:hover{
+    opacity: 0.7;
+}
+
+.drag2_btn.wrong.active{
+    display: block;
 }
 
 .drag2_button.active:hover{

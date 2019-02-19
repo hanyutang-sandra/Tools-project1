@@ -89,13 +89,13 @@ $('.front>button').click(function(){
     $('.cover').removeClass('active');
 });
 
-$('.drag1_button').click(function(){
+$('.drag1_btn').click(function(){
     $('.cover').removeClass('active');
     $('.drag1').removeClass('active');
     playVideo;
 });
 
-$('.drag2_button').click(function(){
+$('.drag2_btn').click(function(){
     $('.drag2').removeClass('active');
     $('.cover').removeClass('active');
     playVideo;
@@ -173,12 +173,13 @@ function sorting1(){
             count += 1
         }
 
-        console.log(move)
         if(move>=8){
             if(count >= 4){
-                $('.drag1_button.correct').addClass('active')
+                $('.drag1_feedback').addClass('active');
+                $('.drag1_btn.correct').addClass('active')
             }else{
-                $('.drag1_button.wrong').addClass('active')
+                $('.drag1_feedback').addClass('active');
+                $('.drag1_btn.wrong').addClass('active')
             }
         }
     }
@@ -254,9 +255,11 @@ function sorting2(){
         console.log(count);
         if(move>=6){
             if(count >= 3){
-
+                $('.drag2_feedback').addClass('active');
+                $('.drag2_btn.correct').addClass('active')
             }else{
-                
+                $('.drag2_feedback').addClass('active');
+                $('.drag2_btn.wrong').addClass('active')
             }
         }
     }

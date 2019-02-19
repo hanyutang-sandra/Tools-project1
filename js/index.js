@@ -1,13 +1,5 @@
-$('.front>button').click(function(){
-    $('.cover').removeClass('active');
-});
-
-
-
-
-
-
-
+// Youtube Api
+// Code modified from https://developers.google.com/youtube/iframe_api_reference#Getting_Started
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 
@@ -21,9 +13,9 @@ function onYouTubeIframeAPIReady() {
         height: '480',
         width: '853',
         videoId: '9bYyTZLe5Ro',
-        autoplay: 1,
+        autoplay: 0,
         events: {
-            'onReady': playVideo,
+            'onReady': pauseVideo,
             'onStateChange': onPlayStateChange
         }
     });
@@ -35,17 +27,15 @@ function playVideo(event) {
 
 var drag1 = '.drag1';
 var drag2 = '.drag2';
+
 function displayQuiz1(){
     pauseVideo()
-    $('.front').removeClass('active')
     $('.cover').addClass('active')
     $('.drag1').addClass('active')
 }
 
 function displayQuiz2(){
     pauseVideo()
-    $('.drag1').removeClass('active')
-    $('.front').removeClass('active')
     $('.cover').addClass('active')
     $('.drag2').addClass('active')
 }
@@ -56,10 +46,7 @@ let interval = setInterval(function(){
 }, 700)
 
 // Modified from http://jsfiddle.net/thirdender/hnkK7/737/
-
-
 let stopPlayAt1 = 10, stopPlayAt2 = 70, stopPlayTimer;
-
 
 function onPlayStateChange(event){
     var time, rate, remainingTime;
@@ -87,11 +74,32 @@ function stopVideo() {
     player.stopVideo();
 }
 
+function playVideo(){
+    player.playVideo()
+}
 
 function pauseVideo() {
     player.pauseVideo();
 }
 
+
+// Basic button actions
+$('.front>button').click(function(){
+    $('.front').removeClass('active');
+    $('.cover').removeClass('active');
+});
+
+$('.drag1_button').click(function(){
+    $('.cover').removeClass('active');
+    $('.drag1').removeClass('active');
+    playVideo;
+});
+
+$('.drag2_button').click(function(){
+    $('.drag2').removeClass('active');
+    $('.cover').removeClass('active');
+    playVideo;
+});
 
 
 
@@ -99,7 +107,6 @@ function pauseVideo() {
 //code modified from https://gist.github.com/catc/a7588f6bae341bbc7c2dbc941e744f18
 
 const displace = window.displacejs;
-var finished1 = 0;
 
 function sorting1(){
 
@@ -109,18 +116,16 @@ function sorting1(){
         displaceInstances.forEach(d=>d.destroy())
     }catch(e){}
 
-    const blockWidth = 104;
-    const blockHeight = 41;
-
-    const targetWidth = $('#t1a').width();
-    const targetHeight = $('#t1a').height();
-
     const dict={
         '#b1a': '#t1b',
         '#b1b': '#t1a',
         '#b1c': '#t1c',
         '#b1d': '#t1d',
     };
+
+    let map = new Map();
+    let move = 0;
+    let count = 0;
 
     displaceInstances = ['#b1a', '#b1b', '#b1c', '#b1d'].map(block => {
         const bel = document.querySelector(block);
@@ -130,44 +135,56 @@ function sorting1(){
             },
             onMouseUp: function(bel){
                 bel.className = bel.className.replace('active', '');
-                checkPosition(bel);
-            },
+                checkPosition1(bel);
+                checkAnswer1(bel, checkPosition1(bel))
+            }
+            })
         });
-    });
 
     //check moved position
-    function checkPosition(el){
+    function checkPosition1(el) {
         let id = '#' + el.id;
-        if($(id).offset().top + 15 >= $(dict[id]).offset().top
-            && $(id).offset().top + blockHeight <= $(dict[id]).offset().top + targetHeight +15
-            && $(id).offset().left +15 >= $(dict[id]).offset().left){
-                finished1 += 1;
-                $(id).css({
-                    'position': 'relative',
-                    'top': 0,
-                    'left': 0,
-                    'right': 0,
-                    'opacity': 0.5
-                });
-                $(dict[id]).children('span').append(el);
-                if(finished1 === 4){
-                    $('.drag1_button').addClass('active')
+        let minDistance = Math.abs($(id).offset().top - $('#t1a').offset().top);
+        let minTarget = '#t1a';
+        let targetList = ['#t1a', '#t1b', '#t1c', '#t1d'];
+
+        for (var i = 0; i < targetList.length; i++) {
+            if (minDistance > Math.abs($(id).offset().top - $(targetList[i]).offset().top)) {
+                minDistance = Math.abs($(id).offset().top - $(targetList[i]).offset().top)
+                minTarget = targetList[i]
+            }
+        }
+        map.set(id, minTarget);
+
+        let mintop = $(minTarget)[0].offsetTop;
+        let minleft = $(minTarget)[0].offsetLeft;
+        $(el).css({
+            'top': mintop,
+            'left': minleft
+        });
+        move += 1;
+        return map
+    }
+
+//check right answer
+    function checkAnswer1(el, map){
+        let id = '#' + el.id;
+        if (map.get(id) === dict[id]){
+            count += 1
+        }
+
+        console.log(move)
+        if(move>=8){
+            if(count >= 4){
+                $('.drag1_button.correct').addClass('active')
+            }else{
+                $('.drag1_button.wrong').addClass('active')
             }
         }
     }
 
 }
 
-sorting1();
-
-$('.drag1_button').click(function(){
-    $('.cover').removeClass('active');
-    $('.drag1').removeClass('active')
-});
-
-
-
-var finished2 = 0;
 
 function sorting2(){
 
@@ -177,19 +194,17 @@ function sorting2(){
         displaceInstances.forEach(d=>d.destroy())
     }catch(e){}
 
-    const blockWidth = 104;
-    const blockHeight = 41;
-
-    const targetWidth = $('#t2a').width();
-    const targetHeight = $('#t2a').height();
-
     const dict={
-        '#b2a': '#t2b',
-        '#b2b': '#t2a',
-        '#b2c': '#t2c'
+        '#b2a': '#t2a',
+        '#b2b': '#t2b',
+        '#b2c': '#t2c',
     };
 
-    displaceInstances = ['#b2b', '#b2c', '#b2a'].map(block => {
+    let map = new Map();
+    let move = 0;
+    let count = 0;
+
+    displaceInstances = ['#b2a', '#b2b', '#b2c'].map(block => {
         const bel = document.querySelector(block);
         return displace(bel, {
             onMouseDown: function(bel){
@@ -197,41 +212,62 @@ function sorting2(){
             },
             onMouseUp: function(bel){
                 bel.className = bel.className.replace('active', '');
-                checkPosition(bel);
-            },
-        });
+                checkPosition2(bel);
+                checkAnswer2(bel, checkPosition2(bel))
+            }
+        })
     });
 
     //check moved position
-    function checkPosition(el){
+    function checkPosition2(el) {
         let id = '#' + el.id;
-        if($(id).offset().top + 15 >= $(dict[id]).offset().top
-            && $(id).offset().top + blockHeight <= $(dict[id]).offset().top + targetHeight +15
-            && $(id).offset().left +15 >= $(dict[id]).offset().left){
-            finished2 += 1;
-            console.log(finished1);
-            $(id).css({
-                'position': 'relative',
-                'top': 0,
-                'left': 0,
-                'right': 0,
-                'opacity': 0.5
-            });
-            $(dict[id]).children('span').append(el);
-            if(finished2 === 3){
-                $('.drag2_button').addClass('active')
+        let minDistance = Math.abs($(id).offset().top - $('#t2a').offset().top);
+        let minTarget = '#t2a';
+        let targetList = ['#t2a', '#t2b', '#t2c'];
+
+        for (var i = 0; i < targetList.length; i++) {
+            if (minDistance > Math.abs($(id).offset().top - $(targetList[i]).offset().top)) {
+                minDistance = Math.abs($(id).offset().top - $(targetList[i]).offset().top)
+                minTarget = targetList[i]
+            }
+        }
+        map.set(id, minTarget);
+
+        let mintop = $(minTarget)[0].offsetTop;
+        let minleft = $(minTarget)[0].offsetLeft;
+        $(el).css({
+            'top': mintop,
+            'left': minleft
+        });
+        move += 1;
+        return map
+    }
+
+//check right answer
+    function checkAnswer2(el, map){
+        let id = '#' + el.id;
+        if (map.get(id) === dict[id]){
+            count += 1
+        }
+
+        console.log(move);
+        console.log(count);
+        if(move>=6){
+            if(count >= 3){
+
+            }else{
+                
             }
         }
     }
 
 }
 
+sorting1();
+
+
 sorting2();
 
-$('.drag2_button').click(function(){
-    $('.drag2').removeClass('active')
-    $('.cover').removeClass('active')
-});
 
 
 

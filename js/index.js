@@ -180,7 +180,7 @@ function sorting1(){
         if (map.get(id) === dict[id]){
             count += 1
         }
-
+        alert(count)
         if(move>=8){
             if(count >= 4){
                 $('.drag1_feedback').addClass('active');
@@ -258,9 +258,6 @@ function sorting2(){
         if (map.get(id) === dict[id]){
             count += 1
         }
-
-        console.log(move);
-        console.log(count);
         if(move>=6){
             if(count >= 3){
                 $('.drag2_feedback').addClass('active');

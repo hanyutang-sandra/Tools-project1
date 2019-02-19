@@ -12,8 +12,16 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '480',
         width: '853',
+        playVars:{
+            fs: 0,
+            autoplay: 0,
+            wmode: 0,
+            controls: 1,
+            rel: 0,
+            modestbranding: 1,
+            showinfo: 0
+        },
         videoId: '9bYyTZLe5Ro',
-        autoplay: 0,
         events: {
             'onReady': pauseVideo,
             'onStateChange': onPlayStateChange
@@ -46,7 +54,7 @@ let interval = setInterval(function(){
 }, 700)
 
 // Modified from http://jsfiddle.net/thirdender/hnkK7/737/
-let stopPlayAt1 = 10, stopPlayAt2 = 70, stopPlayTimer;
+let stopPlayAt1 = 28, stopPlayAt2 = 93, stopPlayTimer;
 
 function onPlayStateChange(event){
     var time, rate, remainingTime;

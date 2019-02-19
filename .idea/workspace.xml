@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40be666-ec29-4f04-903f-f9702717fd2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/drag1_feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/drag1_r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/drag1_w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/drag2_feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/title.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/2c.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/2c.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+            <state relative-caret-position="180">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -44,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="257" column="46" selection-start-line="257" selection-start-column="46" selection-end-line="257" selection-end-column="46" />
+            <state relative-caret-position="285">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -78,14 +67,14 @@
         <option value="$PROJECT_DIR$/js/jQuery.3.3.1.js" />
         <option value="$PROJECT_DIR$/js/displace.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-217" />
-    <option name="y" value="187" />
+    <option name="x" value="57" />
+    <option name="y" value="75" />
     <option name="width" value="1400" />
     <option name="height" value="812" />
   </component>
@@ -166,18 +155,19 @@
       <workItem from="1550508553784" duration="138000" />
       <workItem from="1550508881721" duration="67000" />
       <workItem from="1550509192111" duration="92000" />
-      <workItem from="1550514334965" duration="16280000" />
+      <workItem from="1550514334965" duration="16915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69142000" />
+    <option name="totallyTimeSpent" value="69777000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="357" width="1400" height="812" extended-state="0" />
+    <frame x="359" y="116" width="1400" height="812" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4925575" visible="true" weight="0.24606581" />
-      <window_info id="Structure" order="1" sideWeight="0.5074425" side_tool="true" visible="true" weight="0.24606581" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4925575" visible="true" weight="0.24606581" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5074425" side_tool="true" visible="true" weight="0.24606581" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32882273" />
@@ -237,13 +227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="257" column="46" selection-start-line="257" selection-start-column="46" selection-end-line="257" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/2c.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -252,8 +235,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+        <state relative-caret-position="180">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>

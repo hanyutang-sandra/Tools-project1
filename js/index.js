@@ -180,7 +180,6 @@ function sorting1(){
         if (map.get(id) === dict[id]){
             count += 1
         }
-        alert(count)
         if(move>=8){
             if(count >= 4){
                 $('.drag1_feedback').addClass('active');
